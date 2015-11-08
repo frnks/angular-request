@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt" ng-app="App">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>-->
+
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="angular/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="css/angular.css"/>
+</head>
+
+<body ng-controller="AppCtrl as vm" layout="column" style="height:500px;" ng-cloak>
+
+    <section layout="row" flex>
+        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+            <md-toolbar class="md-theme-light" ng-controller="LeftCtrl">
+                <md-button aria-label="Close" ng-click="close()" class="md-fab">
+                    <md-icon md-svg-src="img/svg/menu.svg"></md-icon>
+                </md-button>
+            </md-toolbar>
+            <md-content layout-padding ng-controller="LeftCtrl">
+
+            </md-content>
+        </md-sidenav>
+        <md-content flex layout-padding>
+            <div layout="column" layout-align="top center">
+                <md-button ng-click="toggleLeft()" ng-hide="isOpenLeft()" class="md-fab md-primary menu" aria-label="Use Android">
+                    <md-icon md-svg-src="img/svg/menu.svg"></md-icon>
+                </md-button>
+            </div>
+            <div class="gridList">
+
+                <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="6" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px" >
+                    <md-grid-tile ng-repeat="tile in vm.tiles" md-rowspan="{{tile.span.row}}" md-colspan="{{tile.span.col}}" md-colspan-sm="1" ng-class="tile.background" >
+                        <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
+                        <md-grid-tile-footer><h3>{{tile.title}}</h3></md-grid-tile-footer>
+                    </md-grid-tile>
+                </md-grid-list>
+            </div>
+        </md-content>
+    </section>
+
+    <script src="angular/angular/angular.js"></script>
+    <script src="angular/angular-animate/angular-animate.js"></script>
+    <script src="angular/angular-aria/angular-aria.js"></script>
+    <script src="angular/angular-material/angular-material.js"></script>
+
+    <script src="js/angular.js"></script>
+
+</body>
+
+</html>
