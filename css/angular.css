@@ -101,15 +101,13 @@
     position: fixed;
 }
 
+md-card{
+    min-width: 300px;
+    max-width: 400px
+}
 
-.demo-card-wide.mdl-card {
-    width: 512px;
-}
-.demo-card-wide > .mdl-card__title {
-    color: #fff;
-    height: 176px;
-    background: url('../img/welcome_card.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-    color: #fff;
+@media only screen and (max-device-width: 854px) {
+    md-card{
+        max-width: 599px;
+    }
 }
