@@ -1,100 +1,5 @@
-.gridList {
-    padding: 0px;
-}
-.gridList md-icon {
-    width: 50%;
-    height: 30%;
-}
-
-.gridList md-icon svg {
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-}
-
-.gridList .s64 {
-    font-size: 64px;
-}
-
-.gridList .s32 {
-    font-size: 48px;
-}
-
-.gridList md-icon.fa {
-    display: block;
-    padding-left: 0;
-}
-
-.gridList md-icon.s32 span {
-    padding-left: 8px;
-}
-
-.gridList md-grid-list {
-    /*margin: 8px; */
-}
-
-.gridList .gray {
-    background: #f5f5f5;
-}
-
-.gridList .green {
-    background: #b9f6ca;
-}
-
-.gridList .yellow {
-    background: #ffff8d;
-}
-
-.gridList .blue {
-    background: #84ffff;
-}
-
-.gridList .darkBlue {
-    background: #80d8ff;
-}
-
-.gridList .deepBlue {
-    background: #448aff;
-}
-
-.gridList .purple {
-    background: #b388ff;
-}
-
-.gridList .lightPurple {
-    background: #8c9eff;
-}
-
-.gridList .red {
-    background: #ff8a80;
-}
-
-.gridList .pink {
-    background: #ff80ab;
-}
-
-.gridList md-grid-tile {
-    transition: all 300ms ease-out 50ms;
-}
-
-.gridList md-grid-tile md-icon {
-    padding-bottom: 32px;
-}
-
-.gridList md-grid-tile md-grid-tile-footer {
-    background: rgba(0, 0, 0, 0.68);
-    height: 36px;
-}
-
-.gridList md-grid-tile-footer figcaption {
-    width: 100%;
-}
-
-.gridList md-grid-tile-footer figcaption h3 {
-    margin: 0;
-    font-weight: 700;
-    width: 100%;
-    text-align: center;
+body{
+    overflow: hidden;
 }
 
 .menu{
@@ -110,4 +15,8 @@ md-card{
     md-card{
         max-width: 599px;
     }
+}
+
+md-backdrop, md-sidenav{
+    position: fixed;
 }

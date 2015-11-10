@@ -1,19 +1,15 @@
 var app = angular.module('App', ['ngMaterial']);
 
 app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log) {
-    $scope.toggleLeft = buildToggler('left');
+
+    $scope.toggleLeft = function () {
+        $mdSidenav('left').toggle()
+            .then(function () {
+                //$log.debug("close LEFT is done");
+            });
+    };
 
     $scope.imagePath = 'img/washedout.png';
-
-    function buildToggler(navID) {
-        return function() {
-            $mdSidenav(navID)
-                .toggle()
-                .then(function () {
-                    //$log.debug("toggle " + navID + " is done");
-                });
-        }
-    }
 
 });
 
@@ -26,7 +22,7 @@ app.config(function($mdThemingProvider) {
 
 app.controller('LeftCtrl', function ($scope, $timeout, $mdSidenav, $log) {
     $scope.close = function () {
-        $mdSidenav('left').close()
+        $mdSidenav('left').toggle()
             .then(function () {
                 //$log.debug("close LEFT is done");
             });
