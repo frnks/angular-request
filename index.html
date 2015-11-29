@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 
-    <!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>-->
+    <title>Requisição</title>
 
     <link rel="stylesheet" href="angular/angular-material/angular-material.css"/>
     <link rel="stylesheet" href="css/angular.css"/>
@@ -15,130 +15,82 @@
 
 <body ng-controller="AppCtrl as vm" layout="column" style="height:500px;" ng-cloak>
 
-    <nav>
-        <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
-            <md-toolbar class="md-theme-light">
-                <md-button aria-label="Close" ng-click="toggleLeft()" class="md-fab md-primary">
-                    <md-icon md-svg-src="img/svg/menu.svg"></md-icon>
-                </md-button>
-            </md-toolbar>
-            <md-content layout-padding ng-controller="LeftCtrl">
-
-            </md-content>
-        </md-sidenav>
-    </nav>
-
-    <section layout="row" flex="">
-
-        <md-content layout-padding>
-            <div layout="column" layout-align="top center">
-                <md-button ng-click="toggleLeft()" class="md-fab md-primary menu" aria-label="Open menu">
-                    <md-icon md-svg-src="img/svg/menu.svg"></md-icon>
-                </md-button>
-            </div>
-
-            <div layout="row" layout-sm="column" layout-align="center start" layout-wrap>
-                <div>
-                    <md-card>
-                        <!--<img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">-->
-                        <md-card-content>
-                            <h2 class="md-title">Paracosm</h2>
-                            <p>
-                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-                            </p>
-                        </md-card-content>
-                        <md-card-actions layout="row" layout-align="end left">
-                            <md-button>Action 1</md-button>
-                            <md-button>Action 2</md-button>
-                        </md-card-actions>
-                    </md-card>
-                </div>
-                <div>
-                    <md-card>
-                        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                        <md-card-content>
-                            <h2 class="md-title">Paracosm</h2>
-                            <p>
-                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-                            </p>
-                        </md-card-content>
-                        <!--<md-card-actions layout="row" layout-align="end center">-->
-                            <!--<md-button>Action 1</md-button>-->
-                            <!--<md-button>Action 2</md-button>-->
-                        <!--</md-card-actions>-->
-                    </md-card>
-                </div>
-                <div>
-                    <md-card>
-                        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                        <md-card-content>
-                            <h2 class="md-title">Paracosm</h2>
-                            <!--<p>-->
-                                <!--The titles of Washed Out's breakthrough song and the first single from Paracosm share the-->
-                                <!--two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...-->
-                            <!--</p>-->
-                        </md-card-content>
-                        <md-card-actions layout="row" layout-align="end center">
-                            <md-button>Action 1</md-button>
-                            <md-button>Action 2</md-button>
-                        </md-card-actions>
-                    </md-card>
-                </div>
-                <div>
-                    <md-card>
-                        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                        <md-card-content>
-                            <h2 class="md-title">Paracosm</h2>
-                            <p>
-                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-                            </p>
-                        </md-card-content>
-                        <md-card-actions layout="row" layout-align="end center">
-                            <md-button>Action 1</md-button>
-                            <md-button>Action 2</md-button>
-                        </md-card-actions>
-                    </md-card>
-                </div>
-                <div>
-                    <md-card>
-                        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                        <md-card-content>
-                            <h2 class="md-title">Paracosm</h2>
-                            <p>
-                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-                            </p>
-                        </md-card-content>
-                        <md-card-actions layout="row" layout-align="end center">
-                            <md-button>Action 1</md-button>
-                            <md-button>Action 2</md-button>
-                        </md-card-actions>
-                    </md-card>
-                </div>
-                <div>
-                    <md-card>
-                        <img ng-src="{{imagePath}}" class="md-card-image" alt="Washed Out">
-                        <md-card-content>
-                            <h2 class="md-title">Paracosm</h2>
-                            <p>
-                                The titles of Washed Out's breakthrough song and the first single from Paracosm share the
-                                two most important words in Ernest Greene's musical language: feel it. It's a simple request, as well...
-                            </p>
-                        </md-card-content>
-                        <md-card-actions layout="row" layout-align="end center">
-                            <md-button>Action 1</md-button>
-                            <md-button>Action 2</md-button>
-                        </md-card-actions>
-                    </md-card>
-                </div>
-            </div>
-
-        </md-content>
+    <section>
+        <div layout="row" layout-sm="column" layout-wrap>
+            <md-input-container flex>
+                <label>URL</label>
+                <input type="text" ng-model="requisicao.url"/>
+            </md-input-container>
+            <md-input-container>
+                <label>Tipo requisição</label>
+                    <md-select ng-model="requisicao.type">
+                    <md-option ng-repeat="tp in type" value="{{tp}}">
+                        {{tp}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+            <div layout="row" layout-sm="column" layout-align="center center" layout-align-sm=""  layout-wrap>
+                <md-button class="md-raised md-primary" ng-click="send()">Enviar</md-button>
+            </div>  
+        </div>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="Headers">
+                <md-content class="md-padding">
+                    <div ng-repeat="rq in requisicao.headers" layout="row" layout-wrap>
+                        <md-input-container flex>
+                            <label>Param</label>
+                            <input type="text" ng-model="rq.param"/>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Value</label>
+                            <input type="text" ng-model="rq.value"/>
+                        </md-input-container>   
+                        <md-button class="md-icon-button launch" ng-click="removeHeaders(this.$index)" aria-label="remove">
+                            <md-icon md-svg-icon="img/svg/delete121.svg"></md-icon>
+                        </md-button>
+                    </div>
+                    <div layout="row" layout-align="center center" layout-wrap>
+                        <md-button class="md-raised md-primary" ng-click="addHeaders()">Add</md-button>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Body">
+                <md-content class="md-padding">
+                    <div ng-repeat="rq in requisicao.body" layout="row" layout-wrap>
+                        <md-input-container flex>
+                            <label>Param</label>
+                            <input type="text" ng-model="rq.param"/>
+                        </md-input-container>
+                        <md-input-container flex>
+                            <label>Value</label>
+                            <input type="text" ng-model="rq.value"/>
+                        </md-input-container>
+                        <md-button class="md-icon-button launch" ng-click="removeBody(this.$index)" aria-label="remove">
+                            <md-icon md-svg-icon="img/svg/delete121.svg"></md-icon>
+                        </md-button>     
+                    </div>
+                    <div layout="row" layout-align="center center" layout-wrap>
+                        <md-button class="md-raised md-primary" ng-click="addBody()">Add</md-button>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Result">
+                <md-content class="md-padding result">
+                    <div layout="row" layout-wrap>
+                        <pre>{{result}}</pre>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Headers">
+                <md-content class="md-padding result">
+                    <div layout="row" layout-wrap>
+                        <pre>{{header}}</pre>
+                    </div>
+                </md-content>
+            </md-tab>
+        </md-tabs>
     </section>
-
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="angular/angular/angular.js"></script>
     <script src="angular/angular-animate/angular-animate.js"></script>

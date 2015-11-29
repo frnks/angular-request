@@ -1,22 +1,12 @@
 body{
-    overflow: hidden;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
 }
 
-.menu{
-    position: fixed;
+.md-tab span{
+    color: #000;
 }
-
-md-card{
-    min-width: 300px;
-    max-width: 400px
-}
-
-@media only screen and (max-device-width: 854px) {
-    md-card{
-        max-width: 599px;
-    }
-}
-
-md-backdrop, md-sidenav{
-    position: fixed;
+.md-tab.md-active span{
+    color: #00BCD4;
 }
