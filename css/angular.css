@@ -10,3 +10,21 @@ body{
 .md-tab.md-active span{
     color: #00BCD4;
 }
+
+.load{
+    display: none;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    z-index: 5000;
+    background: #00BCD4;
+    height: 100%;
+    width: 100%;
+}
+
+.load md-icon{
+    display: block;
+    width: 113px;
+    height: 500px;
+}

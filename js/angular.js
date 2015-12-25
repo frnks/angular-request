@@ -27,7 +27,10 @@ app.controller('AppCtrl', function ($scope, $http) {
 
     $scope.send = function(){
 
-        $scope.result = ""; 
+        $scope.result = "";
+        $scope.header = "";
+
+        $('.load').show();
         
         var url =  $scope.requisicao.url;
         var type = $scope.requisicao.type;
@@ -79,6 +82,8 @@ app.controller('AppCtrl', function ($scope, $http) {
         
         ajax.success (function (data, status, headers, config) {
 
+            $('.load').hide();
+
             var header = {};
 
             header.header   = config.headers;
@@ -92,6 +97,7 @@ app.controller('AppCtrl', function ($scope, $http) {
         });
 
         ajax.error (function (data, status, headers, config) {
+            $('.load').hide();
 
             var header = {};
 
